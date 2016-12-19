@@ -1,3 +1,4 @@
+-- set header
 ngx.header.a = "a"
 ngx.header.b = {"a", "b"}
 ngx.print("a", "b")

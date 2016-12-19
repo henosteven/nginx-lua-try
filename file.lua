@@ -1,3 +1,5 @@
+-- request http://10.94.107.14:1130/file?file=/reset.css??/index.css
+-- 方法需要优化
 function splitFilename(filestr, delimiter)
     if type(filestr) ~= "string" or string.len(filestr) == 0 then
         return
@@ -14,6 +16,8 @@ function splitFilename(filestr, delimiter)
         table.insert(filetable, tmp)
         start = pos + string.len(delimiter)
     end
+
+    -- 因为最后一项值之后没有??
     table.insert(filetable, string.sub(filestr, start))
     return filetable
 end

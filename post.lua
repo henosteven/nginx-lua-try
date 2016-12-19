@@ -1,3 +1,4 @@
+-- get post data
 ngx.header.content_type = "text/plain"
 ngx.req.read_body()
 local uri_post_args = ngx.req.get_post_args()

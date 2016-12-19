@@ -1,3 +1,4 @@
+-- 所有的关于请求的信息都保存在 ngx.req 中
 ngx.header.content_type = "text/plain"
 
 local headers = ngx.req.get_headers()

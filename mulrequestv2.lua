@@ -1,3 +1,4 @@
+-- test capture_multi
 ngx.header.content_type = "text/plain"
 local uri_get_args = ngx.req.get_uri_args()
 local res1, res2 = ngx.location.capture_multi({{"/test1"}, {"/test2"}})
